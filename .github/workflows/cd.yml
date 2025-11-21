@@ -53,7 +53,7 @@ jobs:
       url: ${{ vars.DEPLOY_URL }}
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: ladesa-ro/esteira-ci-cd/actions/deploy-k8s-stakater-application@main
         with:
