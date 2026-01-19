@@ -73,5 +73,5 @@ ENTRYPOINT [ \
   "/opt/keycloak/bin/kc.sh", \
   "start", \
   "--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true", \
-  "--optimized", \
+  "--optimized" \
   ]
