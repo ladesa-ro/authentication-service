@@ -74,5 +74,4 @@ ENTRYPOINT [ \
   "start", \
   "--spi-login-protocol-openid-connect-legacy-logout-redirect-uri=true", \
   "--optimized", \
-  "--proxy=edge" \
   ]
