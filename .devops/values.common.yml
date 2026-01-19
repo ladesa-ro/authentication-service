@@ -1,4 +1,4 @@
-applicationName: ladesa-ro-sso
+applicationName: sso
 
 deployment:
   enabled: false
@@ -39,7 +39,7 @@ service:
   enabled: true
   type: NodePort
   ports:
-    - name: ladesa-ro-sso
+    - name: sso
       port: 80
       targetPort: web
 
