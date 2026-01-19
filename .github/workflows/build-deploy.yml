@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  cd_build_push:
+  ci:
     name: "Build and Push"
     runs-on: ubuntu-latest
 
@@ -42,11 +42,11 @@ jobs:
           push-image: "true"
           push-image-registry-url: ${{ vars.REGISTRY_GHCR == 'true' && 'ghcr.io' || secrets.REGISTRY_URL }}
 
-  cd_deploy:
+  cd:
     name: Deploy to Cluster
 
     runs-on: dev-deploy
-    needs: [cd_build_push]
+    needs: [ci]
 
     environment:
       name: production
