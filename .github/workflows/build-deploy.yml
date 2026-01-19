@@ -1,4 +1,4 @@
-name: "Continuous Deployment"
+name: "Build, Push & Deploy"
 
 on:
   workflow_dispatch:
@@ -45,7 +45,7 @@ jobs:
   cd_deploy:
     name: Deploy to Cluster
 
-    runs-on: deploy
+    runs-on: dev-deploy
     needs: [cd_build_push]
 
     environment:
