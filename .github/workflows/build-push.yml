@@ -36,7 +36,7 @@ jobs:
           password: ${{ vars.REGISTRY_GHCR == 'true' && secrets.GITHUB_TOKEN || secrets.REGISTRY_TOKEN }}
 
       - name: Build and push container image to the registry
-        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc
         with:
           push: true
           tags: ${{ vars.REGISTRY_GHCR == 'true' && 'ghcr.io' || secrets.REGISTRY_URL }}/${{ vars.BUILD_IMAGE_NAME_SSO_SERVICE }}:${{ vars.BUILD_IMAGE_TAG }}
